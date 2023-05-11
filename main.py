@@ -44,26 +44,30 @@ def main():
         elif command.startswith("add"):
             try:
                 name, phone = command.split()[1:]
-                print(add_contact(name, phone))
+                result = add_contact(name, phone)
             except:
-                print("Enter name and phone")
+                result = "Enter name and phone"
+            print(result)
 
         elif command.startswith("change"):
             try:
                 name, phone = command.split()[1:]
-                print(change_phone(name, phone))
+                result = change_phone(name, phone)
             except:
-                print("Enter name and phone")
+                result = "Enter name and phone"
+            print(result)
 
         elif command.startswith("phone"):
             try:
                 name = command.split()[1]
-                print(show_phone(name))
+                result = show_phone(name)
             except:
-                print("Enter name")
+                result = "Enter name"
+            print(result)
 
         elif command == "show all":
-            print(show_all())
+            result = show_all()
+            print(result)
 
         elif command in ["good bye", "close", "exit"]:
             print("Good bye!")
@@ -74,3 +78,4 @@ def main():
 
 
 main()
+
